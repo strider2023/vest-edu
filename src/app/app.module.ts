@@ -16,7 +16,8 @@ import { BorrowerModule } from './borrower/borrower.module';
 import { InvestorModule } from './investor/investor.module';
 import { UserOnboardingModule } from './user-onboarding/user-onboarding.module';
 
-import { MatButtonModule, MatCheckboxModule, MatGridListModule, MatInputModule, MatIconModule, MatToolbarModule } from '@angular/material';
+import { MaterialModule } from './material.module';
+import { FlexLayoutModule } from "@angular/flex-layout";
 
 @NgModule({
   declarations: [
@@ -31,16 +32,12 @@ import { MatButtonModule, MatCheckboxModule, MatGridListModule, MatInputModule, 
     CommonModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MatButtonModule,
-    MatCheckboxModule,
-    MatGridListModule,
-    MatInputModule,
-    MatIconModule,
-    MatToolbarModule,
+    MaterialModule,
     AdminModule,
     BorrowerModule,
     InvestorModule,
-    UserOnboardingModule
+    UserOnboardingModule,
+    FlexLayoutModule
   ],
   providers: [],
   bootstrap: [AppComponent]

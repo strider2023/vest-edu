@@ -8,10 +8,15 @@ import { SearchComponent } from './search/search.component';
 import { UsersComponent } from './users/users.component';
 import { LoanRequestsComponent } from './loan-requests/loan-requests.component';
 
+import { MaterialModule } from '../material.module';
+import { FlexLayoutModule } from "@angular/flex-layout";
+
 @NgModule({
   imports: [
     CommonModule,
-    AdminRoutingModule
+    AdminRoutingModule,
+    MaterialModule,
+    FlexLayoutModule
   ],
   declarations: [AdminDashboardComponent, LoanDetailsComponent, SearchComponent, UsersComponent, LoanRequestsComponent]
 })

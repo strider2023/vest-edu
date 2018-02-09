@@ -1,3 +1,32 @@
-<p>
-  admin-dashboard works!
-</p>
+<div class="w100 h100" fxFlex="column">
+
+  <div class="w100">
+    <mat-toolbar color="primary">
+      <mat-toolbar-row>
+        <button (click)="drawer.toggle()" mat-icon-button>
+          <mat-icon class="material-icons">menu</mat-icon>
+        </button>
+        <span>Custom Toolbar</span>
+        <span class="example-spacer"></span>
+      </mat-toolbar-row>
+    </mat-toolbar>
+  </div>
+
+  <div class="w100 dashboard" fxLayout="row">
+    <mat-drawer-container class="example-container w100" autosize>
+      <mat-drawer #drawer class="example-sidenav" mode="side">
+
+        <p>
+          dsakdsaj
+        </p>
+      </mat-drawer>
+
+      <div class="example-sidenav-content h100">
+        <p>content</p>
+      </div>
+
+    </mat-drawer-container>
+  </div>
+
+
+</div>
