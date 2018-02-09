@@ -9,8 +9,8 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'signup', component: SignupComponent },
   { path: 'admin', loadChildren: 'app/admin/admin.module#AdminModule' },
-  { path: 'investor', loadChildren: 'app/customers/investor.module#InvestorModule' },
-  { path: 'borrower', loadChildren: 'app/customers/borrower.module#BorrowerModule' },
+  { path: 'investor', loadChildren: 'app/investor/investor.module#InvestorModule' },
+  { path: 'borrower', loadChildren: 'app/borrower/borrower.module#BorrowerModule' },
   { path: 'onboarding', loadChildren: 'app/user-onboarding/user-onboarding.module#UserOnboardingModule' }
 ];
 

@@ -14,6 +14,8 @@ Run `ng generate component component-name` to generate a new component. You can 
 
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
 
+After build `cd dist` and then run `http-server` to run and check application.
+
 ## Running unit tests
 
 Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
@@ -35,3 +37,9 @@ Run `npm install --save @angular/animations` for animations package
 Run `npm install --save hammerjs` for gestures
 
 For more information check this [Link](https://material.angular.io/guide/getting-started)
+
+## Http-Server Installation
+
+Run `npm install --save http-server` for running dist build.
+
+For more information check this [Link](https://www.npmjs.com/package/http-server)
