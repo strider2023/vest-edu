@@ -32,9 +32,9 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 Run `npm install --save @angular/material @angular/cdk` for base angular material components
 
-Run `npm install --save @angular/animations` for animations package
+Run `npm install --save @angular/animations` for animations package.
 
-Run `npm install --save hammerjs` for gestures
+Run `npm install --save hammerjs` for gestures.
 
 For more information check this [Link](https://material.angular.io/guide/getting-started)
 
