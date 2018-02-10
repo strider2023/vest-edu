@@ -12,7 +12,11 @@ import {
   MatTabsModule,
   MatSelectModule,
   MatSidenavModule,
-  
+  MatListModule,
+  MatExpansionModule,
+  MatTableModule,
+  MatSortModule,
+  MatPaginatorModule
 } from '@angular/material';
 
 @NgModule({
@@ -26,7 +30,12 @@ import {
     MatRadioModule,
     MatTabsModule,
     MatSelectModule,
-    MatSidenavModule
+    MatSidenavModule,
+    MatListModule,
+    MatExpansionModule,
+    MatTableModule,
+    MatSortModule,
+    MatPaginatorModule
   ],
   exports: [
     MatButtonModule,
@@ -38,7 +47,12 @@ import {
     MatRadioModule,
     MatTabsModule,
     MatSelectModule,
-    MatSidenavModule
+    MatSidenavModule,
+    MatListModule,
+    MatExpansionModule,
+    MatTableModule,
+    MatSortModule,
+    MatPaginatorModule
   ]
 })
 export class MaterialModule {}

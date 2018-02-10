@@ -1,0 +1,115 @@
+// color variables
+$pharagraph: #888888;
+$buttoncolor: #3F51B5;
+$cardleftbg: #188AFB;
+$iconcolor:#d2d2d2;
+:host {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login {
+  height: calc(100% - 64px);
+}
+
+div.input {
+  position: relative;
+}
+
+div.input label {
+  position: absolute;
+  top: -12px;
+  transform: translate(12%);
+  background: white;
+  padding: 5px 10px;
+}
+
+div.input input {
+  padding: 10px 20px;
+  font-size: 25px;
+  outline: 0;
+}
+
+div.input {
+  margin-top: 20px;
+}
+
+.login-wrap {
+  padding: 0px;
+  margin: 0px;
+  & .login-left {
+    background: $cardleftbg;
+    color: #fff;
+    padding: 30px;
+    & .mat-button {
+      background: #1579DD;
+    }
+    & .devider {
+      width: 75%;
+      height: 1px;
+      background: #399dff;
+    }
+  }
+  & .login-card {
+    padding: 30px;
+    & .mat-card-actions,
+    .mat-card-content,
+    .mat-card-subtitle,
+    .mat-card-title {
+      margin-bottom: 0px;
+    }
+    & .mail,
+    .key {
+      color: $iconcolor;
+      margin-right: 20px;
+    }
+    & .gobutton {
+      position: absolute;
+      bottom: -28px;
+    }
+    & .input {
+      margin: 2px 0;
+    }
+    & .f-passord {
+      & .signIn {
+        background: $cardleftbg;
+        color: #fff;
+        border-radius: 20px;
+      }
+      & mat-radio-button {
+        color: $pharagraph;
+      }
+      & a {
+        font-size: 13px;
+        margin-bottom: 12px;
+      }
+    }
+    & .c-account {
+      margin: 30px 0;
+      & p {
+        margin-bottom: 5px;
+      }
+      & a {
+        font-size: 20px;
+        color: $cardleftbg;
+        text-decoration: none;
+      }
+    }
+    & .creat-account {
+      margin: 30px 0;
+      & p {
+        margin-bottom: 5px;
+      }
+      & a {
+        color: $cardleftbg;
+      }
+    }
+    & p {
+      color: $pharagraph;
+      font-size: 12px;
+    }
+  }
+}
+
