@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-admin-dashboard',
@@ -8,9 +9,23 @@ import { Component, OnInit } from '@angular/core';
 export class AdminDashboardComponent implements OnInit {
 
   showFiller = false;
-  constructor() { }
+  categories = [
+    {icon: 'dashboard', list: 'My Dashboard', link: ''},
+    {icon: 'person', list: 'My Profile', link: ''},
+    {icon: 'credit_card', list: 'My Loans', link: ''},
+    {icon: 'account_balance', list: 'Apply a New Loan', link: ''},
+    {icon: 'credit_card', list: 'Transaction History', link: ''},
+    {icon: 'settings', list: 'My Account', link: ''}
+  ];
+
+  constructor(private router: Router) { }
 
   ngOnInit() {
   }
 
+  onNavOptionSelected(category) {
+    if (category.list === 'My Loans') {
+      this.router.navigate(['loans']);
+    }
+  }
 }

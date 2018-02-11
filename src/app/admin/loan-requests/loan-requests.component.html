@@ -14,42 +14,21 @@
 
   <div class="w100 dashboard" fxLayout="row">
     <mat-drawer-container class="example-container w100" autosize>
-      <mat-drawer #drawer class="example-sidenav" mode="side">
-        <mat-list role="list">
-          <mat-list-item role="listitem">Dashboard</mat-list-item>
-          <mat-list-item role="listitem">Borrowers</mat-list-item>
-          <mat-list-item role="listitem">Investors</mat-list-item>
-          <mat-list-item role="listitem">Pending for Auction</mat-list-item>
-        </mat-list>
-        <mat-accordion>
-          <mat-expansion-panel>
-            <mat-expansion-panel-header>
-              <mat-panel-title>
-                Loans
-              </mat-panel-title>
-            </mat-expansion-panel-header>
-            <mat-list role="list">
-              <mat-list-item role="listitem">
-                <a href="#" routerLink="/loans">Complete Loans</a>
-              </mat-list-item>
-              <mat-list-item role="listitem">
-                <a href="#" routerLink="/loans">Overdue Loans</a>
-              </mat-list-item>
-            </mat-list>
-          </mat-expansion-panel>
-          <mat-expansion-panel>
-            <mat-expansion-panel-header>
-              <mat-panel-title>
-                Loan Applications
-              </mat-panel-title>
-            </mat-expansion-panel-header>
-            <mat-list role="list">
-              <mat-list-item role="listitem">Loan Applicationns</mat-list-item>
-              <mat-list-item role="listitem">Funded Applicationns</mat-list-item>
-              <mat-list-item role="listitem">Incomplete Applicationns</mat-list-item>
-            </mat-list>
-          </mat-expansion-panel>
-        </mat-accordion>
+      <mat-drawer #drawer class="vasedu-sidenav" mode="side">
+      <mat-card-header>
+        <div mat-card-avatar class="example-header-image"></div>
+        <mat-card-title>Arindam Nath</mat-card-title>
+        <mat-card-subtitle>Admin</mat-card-subtitle>
+      </mat-card-header>
+      <!-- two line list -->
+      <mat-list class="list-wrap">
+        <mat-list-item *ngFor="let category of categories" (click)="onNavOptionSelected(category)">
+          <button mat-icon-button>
+            <mat-icon class="material-icons">{{category.icon}}</mat-icon>
+          </button>
+          <p>{{category.list}}</p>
+        </mat-list-item>
+      </mat-list>
       </mat-drawer>
       <div class="example-sidenav-content h100">
         <mat-tab-group>
@@ -61,9 +40,7 @@
             </div>
             
             <div class="example-container mat-elevation-z8">
-            
               <mat-table [dataSource]="dataSource" matSort>
-            
                 <!-- ID Column -->
                 <ng-container matColumnDef="id">
                   <mat-header-cell *matHeaderCellDef mat-sort-header> ID </mat-header-cell>

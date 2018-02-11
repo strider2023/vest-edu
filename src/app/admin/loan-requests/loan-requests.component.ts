@@ -1,5 +1,6 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { MatPaginator, MatSort, MatTableDataSource } from '@angular/material';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-loan-requests',
@@ -8,13 +9,21 @@ import { MatPaginator, MatSort, MatTableDataSource } from '@angular/material';
 })
 export class LoanRequestsComponent implements OnInit {
 
+  categories = [
+    { icon: 'dashboard', list: 'My Dashboard', link: '' },
+    { icon: 'person', list: 'My Profile', link: '' },
+    { icon: 'credit_card', list: 'My Loans', link: '' },
+    { icon: 'account_balance', list: 'Apply a New Loan', link: '' },
+    { icon: 'credit_card', list: 'Transaction History', link: '' },
+    { icon: 'settings', list: 'My Account', link: '' }
+  ];
   displayedColumns = ['id', 'name', 'progress', 'color'];
   dataSource: MatTableDataSource<UserData>;
 
   @ViewChild(MatPaginator) paginator: MatPaginator;
   @ViewChild(MatSort) sort: MatSort;
 
-  constructor() {
+  constructor(private router: Router) {
     // Create 100 users
     const users: UserData[] = [];
     for (let i = 1; i <= 100; i++) { users.push(createNewUser(i)); }
@@ -39,6 +48,12 @@ export class LoanRequestsComponent implements OnInit {
     filterValue = filterValue.trim(); // Remove whitespace
     filterValue = filterValue.toLowerCase(); // Datasource defaults to lowercase matches
     this.dataSource.filter = filterValue;
+  }
+
+  onNavOptionSelected(category) {
+    if (category.list === 'My Dashboard') {
+      this.router.navigate(['admin']);
+    }
   }
 }
 
