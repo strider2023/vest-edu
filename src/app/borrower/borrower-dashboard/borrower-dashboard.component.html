@@ -1,3 +1,71 @@
-<p>
-  borrower-dashboard works!
-</p>
+<div class="w100 h100" fxFlex="column">
+
+  <div class="w100">
+    <mat-toolbar color="primary">
+      <mat-toolbar-row>
+        <button (click)="drawer.toggle()" mat-icon-button>
+          <mat-icon class="material-icons">menu</mat-icon>
+        </button>
+        <span>Custom Toolbar</span>
+        <span class="example-spacer"></span>
+      </mat-toolbar-row>
+    </mat-toolbar>
+  </div>
+
+  <div class="w100 dashboard" fxLayout="row">
+    <mat-drawer-container class="example-container w100 h100" autosize>
+      <mat-drawer #drawer class="vasedu-sidenav" mode="side">
+        <mat-card-header fxLayout="row" fxLayoutAlign="start center">
+          <div mat-card-avatar class="example-header-image"></div>
+          <mat-card-title>Shiba Inu</mat-card-title>
+          <mat-card-subtitle>Dog Breed</mat-card-subtitle>
+        </mat-card-header>
+        <!-- two line list -->
+        <mat-list class="list-wrap">
+          <p class="navtitle">Navigation</p>
+          <mat-list-item *ngFor="let category of categories">
+            <button mat-icon-button>
+              <mat-icon class="material-icons">{{category.icon}}</mat-icon>
+            </button>
+            <p>{{category.list}}</p>
+          </mat-list-item>
+        </mat-list>
+      </mat-drawer>
+
+      <div class="content" fxLayout="column">
+        <div class="subToolbar" fxFlex="row" fxLayoutAlign="start center">
+          Profile Status:
+          <button class="green-btn" mat-button>Approved</button>
+        </div>
+        <div class="content-block" fxLayout="row" fxLayoutAlign="center start">
+          <div class="left" fxFlex="60" fxLayout="row" fxLayoutAlign="space-around center">
+            <div fxLayout="column" fxFlex="50">
+              <h2>Personal Details</h2>
+              <div class="form" fxLayout="row" fxLayoutAlign="end center">
+                <p class="text">First Name</p>
+                <mat-form-field fxFlex>
+                  <input matInput value="">
+                </mat-form-field>
+              </div>
+              <div class="form" fxLayout="row" fxLayoutAlign="end center">
+                  <p class="text">Email</p>
+                  <mat-form-field fxFlex>
+                    <input matInput value="">
+                  </mat-form-field>
+                </div>
+            </div>
+
+            <div fxFlex="50">fgfg</div>
+          </div>
+
+          <div fxFlex="40">
+            right
+          </div>
+        </div>
+      </div>
+
+    </mat-drawer-container>
+  </div>
+
+
+</div>

@@ -9,7 +9,7 @@ import { UsersComponent } from './users/users.component';
 import { LoanRequestsComponent } from './loan-requests/loan-requests.component';
 
 import { MaterialModule } from '../material.module';
-import { FlexLayoutModule } from "@angular/flex-layout";
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 @NgModule({
   imports: [

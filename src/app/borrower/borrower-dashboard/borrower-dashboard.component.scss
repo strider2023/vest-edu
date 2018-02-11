@@ -1,0 +1,87 @@
+@import '../../../assets/styles/variables';
+.dashboard {
+    height: calc(100vh - 64px);
+    & .vasedu-sidenav {
+      padding: 20px 0;
+      width: 300px;
+      background: $sidenavbg;
+      & .mat-card-header {
+        display: flex;
+        flex-direction: row;
+        padding: 10px;
+      }
+      & .mat-card-header-text {
+        margin: 0 8px;
+      }
+      color: $white;
+      & .mat-card-title {
+        display: block;
+        margin-bottom: 6px;
+        color: $white;
+      }
+      & .mat-card-subtitle {
+        color: $white;
+      }
+      & .example-header-image {
+        background-image: url("../../../assets/images/profile.jpg");
+        background-size: cover;
+        background-position: 70% 50%;
+      }
+  
+      & .mat-card-avatar {
+        height: 60px;
+        width: 60px;
+        border-radius: 50%;
+        flex-shrink: 0;
+        margin-right: 20px;
+      }
+      & .list-wrap {
+        padding: 0px;
+        & .navtitle {
+          color: $border;
+          padding: 5px;
+        }
+        & .mat-list-item {
+          border-right: solid 1px $sidenavbg;
+          color: $white;
+          cursor: pointer;
+          &:hover {
+            background: $white;
+            color: $black;
+            border-right: solid 1px $border;
+          }
+        }
+      }
+    }
+    & .content {
+      padding: 0px ;
+      & .subToolbar {
+          background: $lightGrey;
+          padding: 10px;
+        & .green-btn {
+            background: $green;
+            border-bottom: solid 2px $darkGreen;
+            font-size: 16px;
+            color: $white;
+            margin-left: 10px;
+        }
+      }
+      & .content-block {
+          padding: 10px;
+          & .left{
+              & h2 {
+                font-size: 20px;
+                font-weight: 500;
+                color: $blue;
+              }
+              & .form {
+                  margin-left: 20px;
+                & .text {
+                    margin-right: 20px;
+                }
+              }
+              
+          }
+      }
+    }
+  }
