@@ -7,6 +7,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./borrower-dashboard.component.scss']
 })
 export class BorrowerDashboardComponent implements OnInit {
+  color = 'primary';
+  mode = 'determinate';
+  value = 50;
   categories = [
     { icon: 'dashboard', list: 'My Dashboard', link: '' },
     { icon: 'person', list: 'My Profile', link: '' },
