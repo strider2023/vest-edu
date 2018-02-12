@@ -1,32 +1,26 @@
 /* You can add global styles to this file, and also import other style files */
 
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
-html,
-body {
-  font-family: Roboto, Helvetica Neue Light, Helvetica Neue, Helvetica, Arial, Lucida Grande, sans-serif;
-  margin: 0px;
-  padding: 0px;
-  height: 100%;
+html, body {
+    font-family: Roboto,Helvetica Neue Light,Helvetica Neue,Helvetica,Arial,Lucida Grande,sans-serif;
+    margin: 0px;
+    padding: 0px;
+    height: 100%;
 }
 
 .example-spacer {
-  flex: 1 1 auto;
-}
-
-.p2p-full-width {
-  width: 100%;
-}
-
-app-login,
-app-admin-dashboard {
-  height: 100vh;
-  width: 100%;
-}
-
-.w100 {
-  width: 100%;
-}
-
-.h100 {
-  height: 100%;
+    flex: 1 1 auto;
+  }
+  .p2p-full-width {
+    width: 100%;
+  }
+  app-login, app-admin-dashboard, app-borrower-dashboard {
+      height: 100vh;
+      width: 100%;
+  }
+  .w100 {
+      width: 100%;
+  }
+  .h100 {
+    height: 100%;
 }

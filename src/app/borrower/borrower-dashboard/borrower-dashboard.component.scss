@@ -1,8 +1,4 @@
-@import '../../../assets/styles/variables';
-$sidenavbg: #2f3f4f;
-$border: #c7c7c7;
-$white: #fff;
-$black: #000;
+@import "../../../assets/styles/variables";
 .dashboard {
   height: calc(100vh - 64px);
   & .vasedu-sidenav {
@@ -27,13 +23,14 @@ $black: #000;
       color: $white;
     }
     & .example-header-image {
-      background-image: url('../../../assets/images/profile.jpg');
+      background-image: url("../../../assets/images/profile.jpg");
       background-size: cover;
-      background-position: 50% 50%;
+      background-position: 70% 50%;
     }
+
     & .mat-card-avatar {
-      height: 40px;
-      width: 40px;
+      height: 60px;
+      width: 60px;
       border-radius: 50%;
       flex-shrink: 0;
       margin-right: 20px;
@@ -57,6 +54,40 @@ $black: #000;
     }
   }
   & .content {
-    padding: 10px;
+    padding: 0px;
+    & .subToolbar {
+      background: $lightGrey;
+      border-bottom: solid 1px $darkborder;
+      padding: 10px;
+      & .green-btn {
+        background: $green;
+        border-bottom: solid 2px $darkGreen;
+        font-size: 16px;
+        color: $white;
+        margin-left: 10px;
+      }
+    }
+    & .content-block {
+      padding: 10px;
+      & .left {
+        & h2 {
+          font-size: 20px;
+          font-weight: 500;
+          color: $blue;
+        }
+        & .form {
+          margin-left: 20px;
+          & .text {
+            color: $black;
+            font-size: 14px;
+            margin-right: 20px;
+          }
+          & .material-icons {
+            color: $border;
+            margin-right: 10px;
+          }
+        }
+      }
+    }
   }
 }
