@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-admin-dashboard',
@@ -17,15 +16,7 @@ export class AdminDashboardComponent implements OnInit {
     { icon: 'settings', list: 'My Account', link: '' }
   ];
 
-  constructor(private router: Router) { }
-
   constructor() {}
 
   ngOnInit() {}
-
-  onNavOptionSelected(category) {
-    if (category.list === 'My Loans') {
-      this.router.navigate(['loans']);
-    }
-  }
 }
