@@ -11,15 +11,13 @@ export class AdminDashboardComponent implements OnInit {
   categories = [
     { icon: 'dashboard', list: 'My Dashboard', link: '' },
     { icon: 'person', list: 'My Profile', link: '' },
-    { icon: 'credit_card', list: 'My Loans', link: '' },
+    { icon: 'credit_card', list: 'My Loans', link: 'loans' },
     { icon: 'account_balance', list: 'Apply a New Loan', link: '' },
     { icon: 'credit_card', list: 'Transaction History', link: '' },
     { icon: 'settings', list: 'My Account', link: '' }
   ];
 
   constructor(private router: Router) { }
-
-  constructor() {}
 
   ngOnInit() {}
 

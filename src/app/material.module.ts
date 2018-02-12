@@ -12,7 +12,6 @@ import {
   MatTabsModule,
   MatSelectModule,
   MatSidenavModule,
-  MatListModule
   MatListModule,
   MatExpansionModule,
   MatTableModule,
