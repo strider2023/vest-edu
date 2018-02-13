@@ -70,6 +70,8 @@
     & .content-block {
       padding: 10px;
       & .left {
+        padding: 10px;
+        border:solid 1px $darkborder;
         & h2 {
           font-size: 20px;
           font-weight: 500;
@@ -87,6 +89,16 @@
             margin-right: 10px;
           }
         }
+        & .blue-btn {
+          background: $blue;
+          border-bottom: solid 2px $darken-blue;
+          font-size: 16px;
+          color: $white;
+        }
+      }
+      & .right {
+        padding: 10px;
+        border:solid 1px $darkborder;
       }
     }
   }
