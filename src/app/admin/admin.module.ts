@@ -8,6 +8,7 @@ import { SearchComponent } from './search/search.component';
 import { UsersComponent } from './users/users.component';
 import { LoanRequestsComponent } from './loan-requests/loan-requests.component';
 
+import { CoreModule } from '../core/core.module';
 import { MaterialModule } from '../material.module';
 import { FlexLayoutModule } from '@angular/flex-layout';
 
@@ -16,7 +17,8 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     CommonModule,
     AdminRoutingModule,
     MaterialModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    CoreModule
   ],
   declarations: [AdminDashboardComponent, LoanDetailsComponent, SearchComponent, UsersComponent, LoanRequestsComponent]
 })

@@ -1,55 +1,55 @@
 <div class="w100 h100" fxFlex="column">
     <div class="w100">
 
-            <mat-toolbar color="primary">
-                    <mat-toolbar-row>
-                        <span>Custom Toolbar</span>
-                        <span class="example-spacer"></span>
-                    </mat-toolbar-row>
-                </mat-toolbar>
+        <mat-toolbar color="primary">
+            <mat-toolbar-row>
+                <span>Vest-Edu</span>
+                <span class="example-spacer"></span>
+            </mat-toolbar-row>
+        </mat-toolbar>
     </div>
     <div class="w100 login" fxLayout="row" fxLayoutAlign="center center">
 
-            <mat-card class="login-wrap animated fadeIn" fxFlex="40">
-                    <div fxLayout="column" fxLayoutAlign="center center" class="login-card" fxFlex="100">
-                        <h2>LOGIN</h2>
-                        <mat-card-content class="p2p-full-width" fxLayout="column" fxLayoutAlign="start center">
-                            <div fxLayout="row" fxLayoutAlign="center center" class="w100">
-                                <mat-icon class="material-icons mail">email</mat-icon>
-                                <mat-form-field class="p2p-full-width input">
-                                    <input matInput placeholder="Email address" value="">
-                                </mat-form-field>
-                            </div>
-                            <div fxLayout="row" fxLayoutAlign="center center" class="w100">
-                                <mat-icon class="material-icons key">vpn_key</mat-icon>
-                                <mat-form-field class="p2p-full-width">
-                                    <input matInput placeholder="Password" type="password" value="">
-                                </mat-form-field>
-                            </div>
-        
-                        </mat-card-content>
-        
-                        <div class="p2p-full-width f-passord" fxLayout="row" fxLayoutAlign="space-between start">
-        
-                            <div fxLayout="column" fxLayoutAlign="center start">
-                                <a href="#">Forgot Password?</a>
-                            </div>
-                            <div>
-                                <button mat-button class="signIn" (click)="login()">
+        <mat-card class="login-wrap animated fadeIn" fxFlex="40">
+            <div fxLayout="column" fxLayoutAlign="center center" class="login-card" fxFlex="100">
+                <h2>LOGIN</h2>
+                <mat-card-content class="p2p-full-width" fxLayout="column" fxLayoutAlign="start center">
+                    <div fxLayout="row" fxLayoutAlign="center center" class="w100">
+                        <mat-icon class="material-icons mail">email</mat-icon>
+                        <mat-form-field class="p2p-full-width input">
+                            <input matInput placeholder="Email address" value="">
+                        </mat-form-field>
+                    </div>
+                    <div fxLayout="row" fxLayoutAlign="center center" class="w100">
+                        <mat-icon class="material-icons key">vpn_key</mat-icon>
+                        <mat-form-field class="p2p-full-width">
+                            <input matInput placeholder="Password" type="password" value="">
+                        </mat-form-field>
+                    </div>
+
+                </mat-card-content>
+
+                <div class="p2p-full-width f-passord" fxLayout="row" fxLayoutAlign="space-between start">
+
+                    <div fxLayout="column" fxLayoutAlign="center start">
+                        <a href="#">Forgot Password?</a>
+                    </div>
+                    <div>
+                        <button mat-button class="signIn" (click)="login()">
                                     <span>Sign In</span>
                                     <mat-icon class="material-icons">arrow_forward</mat-icon>
                                 </button>
-                            </div>
-                        </div>
-        
-                        <div class="c-account" fxLayout="column" fxLayoutAlign="center center">
-                            <p>Not yet Registered?</p>
-                            <a href="#" routerLink="/signup">Create an Accout</a>
-                        </div>
-        
-
                     </div>
-        
-                </mat-card>
+                </div>
+
+                <div class="c-account" fxLayout="column" fxLayoutAlign="center center">
+                    <p>Not yet Registered?</p>
+                    <a href="#" routerLink="/signup">Create an Accout</a>
+                </div>
+
+
+            </div>
+
+        </mat-card>
     </div>
 </div>

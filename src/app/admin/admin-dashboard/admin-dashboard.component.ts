@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+
+import { ADMIN_SIDE_NAV } from '../../core/bo/admin-side-nav';
 
 @Component({
   selector: 'app-admin-dashboard',
@@ -6,19 +9,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./admin-dashboard.component.scss']
 })
 export class AdminDashboardComponent implements OnInit {
-  showFiller = false;
-  categories = [
-    { icon: 'dashboard', list: 'My Dashboard', link: '' },
-    { icon: 'person', list: 'My Profile', link: '' },
-    { icon: 'credit_card', list: 'My Loans', link: 'loans' },
-    { icon: 'account_balance', list: 'Apply a New Loan', link: '' },
-    { icon: 'credit_card', list: 'Transaction History', link: '' },
-    { icon: 'settings', list: 'My Account', link: '' }
-  ];
 
+  readonly categories =  ADMIN_SIDE_NAV;
 
-  constructor(private router: Router) { }
-
+  constructor(private router: Router) {
+   }
 
   ngOnInit() {}
 }

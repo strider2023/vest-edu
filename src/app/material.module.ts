@@ -13,7 +13,11 @@ import {
   MatSelectModule,
   MatSidenavModule,
   MatListModule,
-  MatProgressSpinnerModule
+  MatProgressSpinnerModule,
+  MatExpansionModule,
+  MatTableModule,
+  MatSortModule,
+  MatPaginatorModule
 
 } from '@angular/material';
 
@@ -30,7 +34,11 @@ import {
     MatSelectModule,
     MatSidenavModule,
     MatListModule,
-    MatProgressSpinnerModule
+    MatProgressSpinnerModule,
+    MatExpansionModule,
+    MatTableModule,
+    MatSortModule,
+    MatPaginatorModule
   ],
   exports: [
     MatButtonModule,
@@ -44,7 +52,11 @@ import {
     MatSelectModule,
     MatSidenavModule,
     MatListModule,
-    MatProgressSpinnerModule
+    MatProgressSpinnerModule,
+    MatExpansionModule,
+    MatTableModule,
+    MatSortModule,
+    MatPaginatorModule
   ]
 })
 export class MaterialModule {}
