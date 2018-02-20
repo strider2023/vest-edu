@@ -17,7 +17,9 @@ import { InvestorModule } from './investor/investor.module';
 import { UserOnboardingModule } from './user-onboarding/user-onboarding.module';
 
 import { MaterialModule } from './material.module';
-import { FlexLayoutModule } from "@angular/flex-layout";
+import { FlexLayoutModule } from '@angular/flex-layout';
+
+import { LoginService } from './login/services/login-service.service';
 
 @NgModule({
   declarations: [
@@ -39,7 +41,7 @@ import { FlexLayoutModule } from "@angular/flex-layout";
     UserOnboardingModule,
     FlexLayoutModule
   ],
-  providers: [],
+  providers: [LoginService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
