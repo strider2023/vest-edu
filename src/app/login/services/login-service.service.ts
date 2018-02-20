@@ -10,7 +10,7 @@ export class LoginService {
   constructor(private router: Router, public snackBar: MatSnackBar) { }
 
   checkUserLogin(data: Login) {
-    if (data.password.length > 0 && data.username.length > 0) {
+    if (data.password && data.username) {
       if (data.username === 'admin@vestedu.com') {
         this.router.navigate(['admin']);
       } else if (data.username === 'user@vestedu.com') {

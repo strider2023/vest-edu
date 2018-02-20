@@ -10,15 +10,16 @@ import { LoginService } from './services/login-service.service';
 })
 export class LoginComponent implements OnInit {
 
-  loginData: Login;
+  login: Login;
 
   constructor(private loginService: LoginService) { }
 
   ngOnInit() {
+    this.login = new Login();
   }
 
-  login() {
-    this.loginService.checkUserLogin(this.loginData);
+  doLogin() {
+    this.loginService.checkUserLogin(this.login);
   }
 
 }

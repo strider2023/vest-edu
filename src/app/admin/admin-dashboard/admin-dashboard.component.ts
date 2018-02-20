@@ -10,11 +10,7 @@ import { ADMIN_SIDE_NAV } from '../../core/bo/admin-side-nav';
 })
 export class AdminDashboardComponent implements OnInit {
 
-<<<<<<< HEAD
-  constructor() { }
-=======
   readonly categories =  ADMIN_SIDE_NAV;
->>>>>>> 6d9b1941aab9c21fcdd0d749b989edf732aee491
 
   constructor(private router: Router) {
    }
