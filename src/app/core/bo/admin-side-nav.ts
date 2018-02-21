@@ -5,6 +5,6 @@ export const ADMIN_SIDE_NAV: SideNavObject[] = [
     { icon: 'credit_card', name: 'Loan Requests', route: '/admin/loans', isVisible: true },
     { icon: 'credit_card', name: 'Transaction History', route: '', isVisible: true },
     { icon: 'account_balance', name: 'Reports', route: '', isVisible: true },
-    { icon: 'person', name: 'My Profile', route: '', isVisible: true },
+    { icon: 'person', name: 'My Users', route: '', isVisible: true },
     { icon: 'settings', name: 'Settings', route: '', isVisible: true }
 ];
