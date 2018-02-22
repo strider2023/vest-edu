@@ -1,261 +1,53 @@
 <div class="w100 h100" fxFlex="column">
-  <div class="w100">
-    <mat-toolbar color="primary">
-      <mat-toolbar-row>
-        <button (click)="drawer.toggle()" mat-icon-button>
+    <div class="w100">
+        <mat-toolbar color="primary">
+            <mat-toolbar-row>
+                <button (click)="drawer.toggle()" mat-icon-button>
           <mat-icon class="material-icons">menu</mat-icon>
         </button>
-        <span>Vest Edu</span>
-        <span class="example-spacer"></span>
-      </mat-toolbar-row>
-    </mat-toolbar>
-  </div>
+                <span>Vest Edu</span>
+                <span class="example-spacer"></span>
+            </mat-toolbar-row>
+        </mat-toolbar>
+    </div>
 
-  <div class="w100 dashboard" fxLayout="row">
-    <mat-drawer-container class="example-container w100 h100" autosize>
-      <mat-drawer #drawer class="vasedu-sidenav" mode="side">
-        <mat-card-header fxLayout="row" fxLayoutAlign="start center">
-          <div mat-card-avatar class="example-header-image"></div>
-          <mat-card-title>Shiba Inu</mat-card-title>
-          <mat-card-subtitle>Dog Breed</mat-card-subtitle>
-        </mat-card-header>
-        <!-- two line list -->
-        <mat-list class="list-wrap">
-          <p class="navtitle">Navigation</p>
-          <mat-list-item *ngFor="let category of categories" routerLink="{{category.route}}">
-            <button mat-icon-button>
+    <div class="w100 dashboard" fxLayout="row">
+        <mat-drawer-container class="example-container w100 h100" autosize>
+            <mat-drawer #drawer class="vasedu-sidenav" mode="side">
+                <mat-card-header fxLayout="row" fxLayoutAlign="start center">
+                    <div mat-card-avatar class="example-header-image"></div>
+                    <mat-card-title>Shiba Inu</mat-card-title>
+                    <mat-card-subtitle>Dog Breed</mat-card-subtitle>
+                </mat-card-header>
+                <!-- two line list -->
+                <mat-list class="list-wrap">
+                    <p class="navtitle">Navigation</p>
+                    <mat-list-item *ngFor="let category of categories" routerLink="{{category.route}}">
+                        <button mat-icon-button>
               <mat-icon class="material-icons">{{category.icon}}</mat-icon>
             </button>
-            <p>{{category.name}}</p>
-          </mat-list-item>
-        </mat-list>
-      </mat-drawer>
+                        <p>{{category.name}}</p>
+                    </mat-list-item>
+                </mat-list>
+            </mat-drawer>
 
-      <div class="content" fxLayout="column">
-        <div class="subToolbar" fxFlex="row" fxLayoutAlign="start center">
-          Profile Status:
-          <button class="green-btn" mat-button>Approved</button>
-        </div>
-        <div class="content-block" fxLayout="row" fxLayoutAlign="center start">
-          <div class="left" fxFlex="70" fxLayout="column" fxLayoutAlign="start center">
-
-            <div class="w100" fxLayout="row" fxLayoutAlign="space-around start">
-              <div fxLayout="column" fxFlex="50">
-                <h2>Personal Details</h2>
-                <div class="form" fxLayout="row" fxLayoutAlign="end center">
-                  <p class="text">First Name</p>
-                  <div fxLayout="row" fxLayoutAlign="center center">
-                    <mat-icon class="material-icons">person</mat-icon>
-                    <mat-form-field fxFlex>
-                      <input matInput value="">
-                    </mat-form-field>
-                  </div>
+            <div class="content" fxLayout="column">
+                <div class="subToolbar" fxFlex="row" fxLayoutAlign="start center">
+                    Profile Status:
+                    <button class="green-btn" mat-button>Approved</button>
                 </div>
-                <div class="form" fxLayout="row" fxLayoutAlign="end center">
-                  <p class="text">Email</p>
-                  <div fxLayout="row" fxLayoutAlign="center center">
-                    <mat-icon class="material-icons">email</mat-icon>
-                    <mat-form-field fxFlex>
-                      <input matInput type="email" value="">
-                    </mat-form-field>
-                  </div>
-                </div>
-                <div class="form" fxLayout="row" fxLayoutAlign="end center">
-                  <p class="text">Address 1</p>
-                  <div fxLayout="row" fxLayoutAlign="center center">
-                    <mat-icon class="material-icons">contact_mail</mat-icon>
-                    <mat-form-field fxFlex>
-                      <input matInput value="">
-                    </mat-form-field>
-                  </div>
-                </div>
-                <div class="form" fxLayout="row" fxLayoutAlign="end center">
-                  <p class="text">ZipCode</p>
-                  <div fxLayout="row" fxLayoutAlign="center center">
-                    <mat-icon class="material-icons">contact_mail</mat-icon>
-                    <mat-form-field fxFlex>
-                      <input matInput type="number" value="">
-                    </mat-form-field>
-                  </div>
-                </div>
-                <div class="form" fxLayout="row" fxLayoutAlign="end center">
-                  <p class="text">State</p>
-                  <div fxLayout="row" fxLayoutAlign="center center">
-                    <mat-icon class="material-icons">location_on</mat-icon>
-                    <mat-form-field fxFlex>
-                      <input matInput value="">
-                    </mat-form-field>
-                  </div>
-                </div>
-                <div class="form" fxLayout="row" fxLayoutAlign="end center">
-                  <p class="text">Citizenship</p>
-                  <div fxLayout="row" fxLayoutAlign="center center">
-                    <mat-icon class="material-icons">location_on</mat-icon>
-                    <mat-form-field fxFlex>
-                      <input matInput value="">
-                    </mat-form-field>
-                  </div>
-                </div>
-              </div>
-              <div fxFlex="50">
-                <h2>&nbsp;</h2>
-                <div class="form" fxLayout="row" fxLayoutAlign="end center">
-                  <p class="text">Last Name</p>
-                  <div fxLayout="row" fxLayoutAlign="center center">
-                    <mat-icon class="material-icons">person</mat-icon>
-                    <mat-form-field fxFlex>
-                      <input matInput value="">
-                    </mat-form-field>
-                  </div>
-                </div>
-                <div class="form" fxLayout="row" fxLayoutAlign="end center">
-                  <p class="text">Phone</p>
-                  <div fxLayout="row" fxLayoutAlign="center center">
-                    <mat-icon class="material-icons">phone_android</mat-icon>
-                    <mat-form-field fxFlex>
-                      <input matInput value="">
-                    </mat-form-field>
-                  </div>
-                </div>
-                <div class="form" fxLayout="row" fxLayoutAlign="end center">
-                  <p class="text">Address 2</p>
-                  <div fxLayout="row" fxLayoutAlign="center center">
-                    <mat-icon class="material-icons">contact_mail</mat-icon>
-                    <mat-form-field fxFlex>
-                      <input matInput value="">
-                    </mat-form-field>
-                  </div>
-                </div>
-                <div class="form" fxLayout="row" fxLayoutAlign="end center">
-                  <p class="text">Country</p>
-                  <div fxLayout="row" fxLayoutAlign="center center">
-                    <mat-icon class="material-icons">language</mat-icon>
-                    <mat-form-field>
-                      <mat-select>
-                        <mat-option *ngFor="let select of country" [value]="select.value">
-                          {{ select.countryname }}
-                        </mat-option>
-                      </mat-select>
-                    </mat-form-field>
-                  </div>
-                </div>
-                <div class="form" fxLayout="row" fxLayoutAlign="end center">
-                  <p class="text">City</p>
-                  <div fxLayout="row" fxLayoutAlign="center center">
-                    <mat-icon class="material-icons">location_on</mat-icon>
-                    <mat-form-field>
-                      <mat-select>
-                        <mat-option *ngFor="let select of city" [value]="select.value">
-                          {{ select.cityname }}
-                        </mat-option>
-                      </mat-select>
-                    </mat-form-field>
-                  </div>
-                </div>
-
-              </div>
+                <mat-tab-group>
+                    <mat-tab label="Personal">
+                        <app-profile-personal></app-profile-personal>
+                    </mat-tab>
+                    <mat-tab label="Professional">
+                        <app-profile-professional></app-profile-professional>
+                    </mat-tab>
+                    <mat-tab label="Education">
+                        <app-profile-education></app-profile-education>
+                    </mat-tab>
+                </mat-tab-group>
             </div>
-            <div class="w100" fxLayout="row" fxLayoutAlign="space-around start">
-              <div fxLayout="column" fxFlex="50">
-                <h2>Contact In Home Town</h2>
-                <div class="form" fxLayout="row" fxLayoutAlign="end center">
-                  <p class="text">First Name</p>
-                  <div fxLayout="row" fxLayoutAlign="center center">
-                    <mat-icon class="material-icons">person</mat-icon>
-                    <mat-form-field fxFlex>
-                      <input matInput value="">
-                    </mat-form-field>
-                  </div>
-                </div>
-                <div class="form" fxLayout="row" fxLayoutAlign="end center">
-                  <p class="text">Email</p>
-                  <div fxLayout="row" fxLayoutAlign="center center">
-                    <mat-icon class="material-icons">email</mat-icon>
-                    <mat-form-field fxFlex>
-                      <input matInput type="email" value="">
-                    </mat-form-field>
-                  </div>
-                </div>
-              </div>
-              <div fxFlex="50">
-                <h2>&nbsp;</h2>
-                <div class="form" fxLayout="row" fxLayoutAlign="end center">
-                  <p class="text">Last Name</p>
-                  <div fxLayout="row" fxLayoutAlign="center center">
-                    <mat-icon class="material-icons">person</mat-icon>
-                    <mat-form-field fxFlex>
-                      <input matInput value="">
-                    </mat-form-field>
-                  </div>
-                </div>
-                <div class="form" fxLayout="row" fxLayoutAlign="end center">
-                  <p class="text">Phone</p>
-                  <div fxLayout="row" fxLayoutAlign="center center">
-                    <mat-icon class="material-icons">phone_android</mat-icon>
-                    <mat-form-field fxFlex>
-                      <input matInput value="">
-                    </mat-form-field>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="w100" fxLayout="row" fxLayoutAlign="space-around start">
-              <div fxLayout="column" fxFlex="50">
-                <h2>Local Contact In USA</h2>
-                <div class="form" fxLayout="row" fxLayoutAlign="end center">
-                  <p class="text">First Name</p>
-                  <div fxLayout="row" fxLayoutAlign="center center">
-                    <mat-icon class="material-icons">person</mat-icon>
-                    <mat-form-field fxFlex>
-                      <input matInput value="">
-                    </mat-form-field>
-                  </div>
-                </div>
-                <div class="form" fxLayout="row" fxLayoutAlign="end center">
-                  <p class="text">Email</p>
-                  <div fxLayout="row" fxLayoutAlign="center center">
-                    <mat-icon class="material-icons">email</mat-icon>
-                    <mat-form-field fxFlex>
-                      <input matInput type="email" value="">
-                    </mat-form-field>
-                  </div>
-                </div>
-              </div>
-              <div fxFlex="50">
-                <h2>&nbsp;</h2>
-                <div class="form" fxLayout="row" fxLayoutAlign="end center">
-                  <p class="text">Last Name</p>
-                  <div fxLayout="row" fxLayoutAlign="center center">
-                    <mat-icon class="material-icons">person</mat-icon>
-                    <mat-form-field fxFlex>
-                      <input matInput value="">
-                    </mat-form-field>
-                  </div>
-                </div>
-                <div class="form" fxLayout="row" fxLayoutAlign="end center">
-                  <p class="text">Phone</p>
-                  <div fxLayout="row" fxLayoutAlign="center center">
-                    <mat-icon class="material-icons">phone_android</mat-icon>
-                    <mat-form-field fxFlex>
-                      <input matInput value="">
-                    </mat-form-field>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <button class="blue-btn" mat-button>Save</button>
-          </div>
-          <div class="right" fxFlex="30">
-            <div fxLayout="column" fxFlex="50">
-              <h2>Profile Completed</h2>
-              <div class="form" fxLayout="row" fxLayoutAlign="end center">
-                <mat-progress-spinner class="example-margin" [color]="color" [mode]="mode" [value]="value">
-                </mat-progress-spinner>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </mat-drawer-container>
-  </div>
+        </mat-drawer-container>
+    </div>
 </div>

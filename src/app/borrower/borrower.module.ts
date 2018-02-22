@@ -13,6 +13,9 @@ import { ApplyLoanComponent } from './apply-loan/apply-loan.component';
 import { CoreModule } from '../core/core.module';
 import { MaterialModule } from '../material.module';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { ProfilePersonalComponent } from './profile/profile-personal/profile-personal.component';
+import { ProfileProfessionalComponent } from './profile/profile-professional/profile-professional.component';
+import { ProfileEducationComponent } from './profile/profile-education/profile-education.component';
 
 @NgModule({
   imports: [
@@ -29,6 +32,9 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     LoansDetailsComponent,
     TransactionsComponent,
     AccountComponent,
-    ApplyLoanComponent]
+    ApplyLoanComponent,
+    ProfilePersonalComponent,
+    ProfileProfessionalComponent,
+    ProfileEducationComponent]
 })
 export class BorrowerModule { }
