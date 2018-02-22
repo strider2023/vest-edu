@@ -9,13 +9,15 @@ import { LoansDetailsComponent } from './loans-details/loans-details.component';
 import { TransactionsComponent } from './transactions/transactions.component';
 import { AccountComponent } from './account/account.component';
 import { ApplyLoanComponent } from './apply-loan/apply-loan.component';
+import { ProfilePersonalComponent } from './profile/profile-personal/profile-personal.component';
+import { ProfileProfessionalComponent } from './profile/profile-professional/profile-professional.component';
+import { ProfileEducationComponent } from './profile/profile-education/profile-education.component';
 
 import { CoreModule } from '../core/core.module';
 import { MaterialModule } from '../material.module';
 import { FlexLayoutModule } from '@angular/flex-layout';
-import { ProfilePersonalComponent } from './profile/profile-personal/profile-personal.component';
-import { ProfileProfessionalComponent } from './profile/profile-professional/profile-professional.component';
-import { ProfileEducationComponent } from './profile/profile-education/profile-education.component';
+
+import { LoansService } from './loans/services/loans.service';
 
 @NgModule({
   imports: [
@@ -35,6 +37,7 @@ import { ProfileEducationComponent } from './profile/profile-education/profile-e
     ApplyLoanComponent,
     ProfilePersonalComponent,
     ProfileProfessionalComponent,
-    ProfileEducationComponent]
+    ProfileEducationComponent],
+  providers: [LoansService]
 })
 export class BorrowerModule { }

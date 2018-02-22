@@ -12,11 +12,17 @@ import { LoansDetailsComponent } from './loans-details/loans-details.component';
 
 const routes: Routes = [
   { path: '', component: BorrowerDashboardComponent },
-  { path: 'borrower/profile', component: ProfileComponent },
-  { path: 'borrower/loans', component: LoansComponent },
-  { path: 'borrower/apply', component: ApplyLoanComponent },
-  { path: 'borrower/transactions', component: TransactionsComponent },
-  { path: 'borrower/account', component: AccountComponent }
+  {
+    path: '',
+    children: [
+      { path: 'profile', component: ProfileComponent },
+      { path: 'loans', component: LoansComponent },
+      { path: 'apply', component: ApplyLoanComponent },
+      { path: 'transactions', component: TransactionsComponent },
+      { path: 'account', component: AccountComponent },
+      { path: 'loan/details/:id', component: LoansDetailsComponent }
+    ]
+  }
 ];
 
 @NgModule({

@@ -7,8 +7,13 @@ import { LoanDetailsComponent } from './loan-details/loan-details.component';
 
 const routes: Routes = [
   { path: '', component: AdminDashboardComponent },
-  { path: 'admin/loans', component: LoanRequestsComponent },
-  { path: 'admin/loan/details', component: LoanDetailsComponent }
+  {
+    path: '',
+    children: [
+      { path: 'loans', component: LoanRequestsComponent },
+      { path: 'loan/details/:id', component: LoanDetailsComponent }
+    ]
+  }
 ];
 
 @NgModule({

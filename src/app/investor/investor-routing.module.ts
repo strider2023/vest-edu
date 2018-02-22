@@ -10,11 +10,16 @@ import { PaymentsComponent } from './payments/payments.component';
 
 const routes: Routes = [
   { path: '', component: InvestorDashboardComponent },
-  { path: 'investor/profile', component: ProfileComponent },
-  { path: 'investor/loans', component: LoanRequestsComponent },
-  { path: 'investor/investment', component: InvestmentsComponent },
-  { path: 'investor/payments', component: PaymentsComponent },
-  { path: 'investor/account', component: AccountComponent }
+  {
+    path: '',
+    children: [
+      { path: 'profile', component: ProfileComponent },
+      { path: 'loans', component: LoanRequestsComponent },
+      { path: 'investment', component: InvestmentsComponent },
+      { path: 'payments', component: PaymentsComponent },
+      { path: 'account', component: AccountComponent }
+    ]
+  }
 ];
 
 @NgModule({
