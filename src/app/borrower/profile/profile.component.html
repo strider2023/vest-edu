@@ -1,0 +1,53 @@
+<div class="w100 h100" fxFlex="column">
+    <div class="w100">
+        <mat-toolbar color="primary">
+            <mat-toolbar-row>
+                <button (click)="drawer.toggle()" mat-icon-button>
+          <mat-icon class="material-icons">menu</mat-icon>
+        </button>
+                <span>Vest Edu</span>
+                <span class="example-spacer"></span>
+            </mat-toolbar-row>
+        </mat-toolbar>
+    </div>
+
+    <div class="w100 dashboard" fxLayout="row">
+        <mat-drawer-container class="example-container w100 h100" autosize>
+            <mat-drawer #drawer class="vasedu-sidenav" mode="side">
+                <mat-card-header fxLayout="row" fxLayoutAlign="start center">
+                    <div mat-card-avatar class="example-header-image"></div>
+                    <mat-card-title>Shiba Inu</mat-card-title>
+                    <mat-card-subtitle>Dog Breed</mat-card-subtitle>
+                </mat-card-header>
+                <!-- two line list -->
+                <mat-list class="list-wrap">
+                    <p class="navtitle">Navigation</p>
+                    <mat-list-item *ngFor="let category of categories" routerLink="{{category.route}}">
+                        <button mat-icon-button>
+              <mat-icon class="material-icons">{{category.icon}}</mat-icon>
+            </button>
+                        <p>{{category.name}}</p>
+                    </mat-list-item>
+                </mat-list>
+            </mat-drawer>
+
+            <div class="content" fxLayout="column">
+                <div class="subToolbar" fxFlex="row" fxLayoutAlign="start center">
+                    Profile Status:
+                    <button class="green-btn" mat-button>Approved</button>
+                </div>
+                <mat-tab-group>
+                    <mat-tab label="Personal">
+                        <app-profile-personal></app-profile-personal>
+                    </mat-tab>
+                    <mat-tab label="Professional">
+                        <app-profile-professional></app-profile-professional>
+                    </mat-tab>
+                    <mat-tab label="Education">
+                        <app-profile-education></app-profile-education>
+                    </mat-tab>
+                </mat-tab-group>
+            </div>
+        </mat-drawer-container>
+    </div>
+</div>

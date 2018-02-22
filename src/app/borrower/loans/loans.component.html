@@ -1,0 +1,61 @@
+<div class="w100 h100" fxFlex="column">
+    <div class="w100">
+        <mat-toolbar color="primary">
+            <mat-toolbar-row>
+                <button (click)="drawer.toggle()" mat-icon-button>
+                  <mat-icon class="material-icons">menu</mat-icon>
+                </button>
+                <span>Vest Edu</span>
+                <span class="example-spacer"></span>
+            </mat-toolbar-row>
+        </mat-toolbar>
+    </div>
+    <div class="w100 dashboard" fxLayout="row">
+        <mat-drawer-container class="example-container w100 h100" autosize>
+            <mat-drawer #drawer class="vasedu-sidenav" mode="side">
+                <mat-card-header fxLayout="row" fxLayoutAlign="start center">
+                    <div mat-card-avatar class="example-header-image"></div>
+                    <mat-card-title>Arindam Nath</mat-card-title>
+                    <mat-card-subtitle>Borrower</mat-card-subtitle>
+                </mat-card-header>
+                <!-- two line list -->
+                <mat-list class="list-wrap">
+                    <mat-list-item *ngFor="let category of categories" routerLink="{{category.route}}">
+                        <button mat-icon-button>
+                          <mat-icon class="material-icons">{{category.icon}}</mat-icon>
+                        </button>
+                        <p>{{category.name}}</p>
+                    </mat-list-item>
+                </mat-list>
+            </mat-drawer>
+            <div class="content" fxLayout="column">
+                <mat-table [dataSource]="dataSource" matSort>
+                    <!-- ID Column -->
+                    <ng-container matColumnDef="id">
+                        <mat-header-cell *matHeaderCellDef mat-sort-header> ID </mat-header-cell>
+                        <mat-cell *matCellDef="let row"> {{row.id}} </mat-cell>
+                    </ng-container>
+                    <!-- Progress Column -->
+                    <ng-container matColumnDef="progress">
+                        <mat-header-cell *matHeaderCellDef mat-sort-header> Progress </mat-header-cell>
+                        <mat-cell *matCellDef="let row"> {{row.progress}}% </mat-cell>
+                    </ng-container>
+                    <!-- Name Column -->
+                    <ng-container matColumnDef="name">
+                        <mat-header-cell *matHeaderCellDef mat-sort-header> Name </mat-header-cell>
+                        <mat-cell *matCellDef="let row"> {{row.name}} </mat-cell>
+                    </ng-container>
+                    <!-- Color Column -->
+                    <ng-container matColumnDef="color">
+                        <mat-header-cell *matHeaderCellDef mat-sort-header> Color </mat-header-cell>
+                        <mat-cell *matCellDef="let row" [style.color]="row.color"> {{row.color}} </mat-cell>
+                    </ng-container>
+                    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+                    <mat-row *matRowDef="let row; columns: displayedColumns;">
+                    </mat-row>
+                </mat-table>
+                <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]"></mat-paginator>
+            </div>
+        </mat-drawer-container>
+    </div>
+</div>

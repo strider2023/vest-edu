@@ -1,0 +1,218 @@
+<div class="content-block" fxLayout="row" fxLayoutAlign="center start">
+    <div class="left" fxFlex="70" fxLayout="column" fxLayoutAlign="start center">
+        <div class="w100" fxLayout="row" fxLayoutAlign="space-around start">
+            <div fxLayout="column" fxFlex="50">
+                <h2>Personal Details</h2>
+                <div class="form" fxLayout="row" fxLayoutAlign="end center">
+                    <p class="text">First Name</p>
+                    <div fxLayout="row" fxLayoutAlign="center center">
+                        <mat-icon class="material-icons">person</mat-icon>
+                        <mat-form-field fxFlex>
+                            <input matInput value="">
+                        </mat-form-field>
+                    </div>
+                </div>
+                <div class="form" fxLayout="row" fxLayoutAlign="end center">
+                    <p class="text">Email</p>
+                    <div fxLayout="row" fxLayoutAlign="center center">
+                        <mat-icon class="material-icons">email</mat-icon>
+                        <mat-form-field fxFlex>
+                            <input matInput type="email" value="">
+                        </mat-form-field>
+                    </div>
+                </div>
+                <div class="form" fxLayout="row" fxLayoutAlign="end center">
+                    <p class="text">Address 1</p>
+                    <div fxLayout="row" fxLayoutAlign="center center">
+                        <mat-icon class="material-icons">contact_mail</mat-icon>
+                        <mat-form-field fxFlex>
+                            <input matInput value="">
+                        </mat-form-field>
+                    </div>
+                </div>
+                <div class="form" fxLayout="row" fxLayoutAlign="end center">
+                    <p class="text">ZipCode</p>
+                    <div fxLayout="row" fxLayoutAlign="center center">
+                        <mat-icon class="material-icons">contact_mail</mat-icon>
+                        <mat-form-field fxFlex>
+                            <input matInput type="number" value="">
+                        </mat-form-field>
+                    </div>
+                </div>
+                <div class="form" fxLayout="row" fxLayoutAlign="end center">
+                    <p class="text">State</p>
+                    <div fxLayout="row" fxLayoutAlign="center center">
+                        <mat-icon class="material-icons">location_on</mat-icon>
+                        <mat-form-field fxFlex>
+                            <input matInput value="">
+                        </mat-form-field>
+                    </div>
+                </div>
+                <div class="form" fxLayout="row" fxLayoutAlign="end center">
+                    <p class="text">Citizenship</p>
+                    <div fxLayout="row" fxLayoutAlign="center center">
+                        <mat-icon class="material-icons">location_on</mat-icon>
+                        <mat-form-field fxFlex>
+                            <input matInput value="">
+                        </mat-form-field>
+                    </div>
+                </div>
+            </div>
+            <div fxFlex="50">
+                <h2>&nbsp;</h2>
+                <div class="form" fxLayout="row" fxLayoutAlign="end center">
+                    <p class="text">Last Name</p>
+                    <div fxLayout="row" fxLayoutAlign="center center">
+                        <mat-icon class="material-icons">person</mat-icon>
+                        <mat-form-field fxFlex>
+                            <input matInput value="">
+                        </mat-form-field>
+                    </div>
+                </div>
+                <div class="form" fxLayout="row" fxLayoutAlign="end center">
+                    <p class="text">Phone</p>
+                    <div fxLayout="row" fxLayoutAlign="center center">
+                        <mat-icon class="material-icons">phone_android</mat-icon>
+                        <mat-form-field fxFlex>
+                            <input matInput value="">
+                        </mat-form-field>
+                    </div>
+                </div>
+                <div class="form" fxLayout="row" fxLayoutAlign="end center">
+                    <p class="text">Address 2</p>
+                    <div fxLayout="row" fxLayoutAlign="center center">
+                        <mat-icon class="material-icons">contact_mail</mat-icon>
+                        <mat-form-field fxFlex>
+                            <input matInput value="">
+                        </mat-form-field>
+                    </div>
+                </div>
+                <div class="form" fxLayout="row" fxLayoutAlign="end center">
+                    <p class="text">Country</p>
+                    <div fxLayout="row" fxLayoutAlign="center center">
+                        <mat-icon class="material-icons">language</mat-icon>
+                        <mat-form-field>
+                            <mat-select>
+                                <mat-option *ngFor="let select of country" [value]="select.value">
+                                    {{ select.countryname }}
+                                </mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                    </div>
+                </div>
+                <div class="form" fxLayout="row" fxLayoutAlign="end center">
+                    <p class="text">City</p>
+                    <div fxLayout="row" fxLayoutAlign="center center">
+                        <mat-icon class="material-icons">location_on</mat-icon>
+                        <mat-form-field>
+                            <mat-select>
+                                <mat-option *ngFor="let select of city" [value]="select.value">
+                                    {{ select.cityname }}
+                                </mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="w100" fxLayout="row" fxLayoutAlign="space-around start">
+            <div fxLayout="column" fxFlex="50">
+                <h2>Contact In Home Town</h2>
+                <div class="form" fxLayout="row" fxLayoutAlign="end center">
+                    <p class="text">First Name</p>
+                    <div fxLayout="row" fxLayoutAlign="center center">
+                        <mat-icon class="material-icons">person</mat-icon>
+                        <mat-form-field fxFlex>
+                            <input matInput value="">
+                        </mat-form-field>
+                    </div>
+                </div>
+                <div class="form" fxLayout="row" fxLayoutAlign="end center">
+                    <p class="text">Email</p>
+                    <div fxLayout="row" fxLayoutAlign="center center">
+                        <mat-icon class="material-icons">email</mat-icon>
+                        <mat-form-field fxFlex>
+                            <input matInput type="email" value="">
+                        </mat-form-field>
+                    </div>
+                </div>
+            </div>
+            <div fxFlex="50">
+                <h2>&nbsp;</h2>
+                <div class="form" fxLayout="row" fxLayoutAlign="end center">
+                    <p class="text">Last Name</p>
+                    <div fxLayout="row" fxLayoutAlign="center center">
+                        <mat-icon class="material-icons">person</mat-icon>
+                        <mat-form-field fxFlex>
+                            <input matInput value="">
+                        </mat-form-field>
+                    </div>
+                </div>
+                <div class="form" fxLayout="row" fxLayoutAlign="end center">
+                    <p class="text">Phone</p>
+                    <div fxLayout="row" fxLayoutAlign="center center">
+                        <mat-icon class="material-icons">phone_android</mat-icon>
+                        <mat-form-field fxFlex>
+                            <input matInput value="">
+                        </mat-form-field>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="w100" fxLayout="row" fxLayoutAlign="space-around start">
+            <div fxLayout="column" fxFlex="50">
+                <h2>Local Contact In USA</h2>
+                <div class="form" fxLayout="row" fxLayoutAlign="end center">
+                    <p class="text">First Name</p>
+                    <div fxLayout="row" fxLayoutAlign="center center">
+                        <mat-icon class="material-icons">person</mat-icon>
+                        <mat-form-field fxFlex>
+                            <input matInput value="">
+                        </mat-form-field>
+                    </div>
+                </div>
+                <div class="form" fxLayout="row" fxLayoutAlign="end center">
+                    <p class="text">Email</p>
+                    <div fxLayout="row" fxLayoutAlign="center center">
+                        <mat-icon class="material-icons">email</mat-icon>
+                        <mat-form-field fxFlex>
+                            <input matInput type="email" value="">
+                        </mat-form-field>
+                    </div>
+                </div>
+            </div>
+            <div fxFlex="50">
+                <h2>&nbsp;</h2>
+                <div class="form" fxLayout="row" fxLayoutAlign="end center">
+                    <p class="text">Last Name</p>
+                    <div fxLayout="row" fxLayoutAlign="center center">
+                        <mat-icon class="material-icons">person</mat-icon>
+                        <mat-form-field fxFlex>
+                            <input matInput value="">
+                        </mat-form-field>
+                    </div>
+                </div>
+                <div class="form" fxLayout="row" fxLayoutAlign="end center">
+                    <p class="text">Phone</p>
+                    <div fxLayout="row" fxLayoutAlign="center center">
+                        <mat-icon class="material-icons">phone_android</mat-icon>
+                        <mat-form-field fxFlex>
+                            <input matInput value="">
+                        </mat-form-field>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button class="blue-btn" mat-button>Save</button>
+    </div>
+    <div class="right" fxFlex="30">
+        <div fxLayout="column" fxFlex="50">
+            <h2>Profile Completed</h2>
+            <div class="form" fxLayout="row" fxLayoutAlign="end center">
+                <mat-progress-spinner class="example-margin" [color]="color" [mode]="mode" [value]="value">
+                </mat-progress-spinner>
+            </div>
+        </div>
+    </div>
+</div>
