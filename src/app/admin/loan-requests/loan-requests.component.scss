@@ -1,8 +1,4 @@
-@import '../../../assets/styles/variables';
-$sidenavbg: #2f3f4f;
-$border: #c7c7c7;
-$white: #fff;
-$black: #000;
+@import 'variables';
 .dashboard {
     height: calc(100vh - 64px);
     & .vasedu-sidenav {
