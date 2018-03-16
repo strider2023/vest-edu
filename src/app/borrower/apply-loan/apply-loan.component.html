@@ -1,3 +1,70 @@
-<p>
-  apply-loan works!
-</p>
+<div class="w100 h100" fxFlex="column">
+  <div class="w100">
+    <mat-toolbar color="primary">
+      <mat-toolbar-row>
+        <button (click)="drawer.toggle()" mat-icon-button>
+          <mat-icon class="material-icons">menu</mat-icon>
+        </button>
+        <span>Vest Edu</span>
+        <span class="example-spacer"></span>
+      </mat-toolbar-row>
+    </mat-toolbar>
+  </div>
+
+  <div class="w100 dashboard" fxLayout="row">
+    <mat-drawer-container class="example-container w100 h100" autosize>
+      <mat-drawer #drawer class="vasedu-sidenav" mode="side">
+        <mat-card-header fxLayout="row" fxLayoutAlign="start center">
+          <div mat-card-avatar class="example-header-image"></div>
+          <mat-card-title>Shiba Inu</mat-card-title>
+          <mat-card-subtitle>Dog Breed</mat-card-subtitle>
+        </mat-card-header>
+        <!-- two line list -->
+        <mat-list class="list-wrap">
+          <mat-list-item *ngFor="let category of categories" routerLink="{{category.route}}">
+            <button mat-icon-button>
+              <mat-icon class="material-icons">{{category.icon}}</mat-icon>
+            </button>
+            <p>{{category.name}}</p>
+          </mat-list-item>
+        </mat-list>
+      </mat-drawer>
+
+      <div class="content" fxLayout="column">
+        <mat-horizontal-stepper [linear]="isLinear" #stepper="matHorizontalStepper">
+          <mat-step [stepControl]="firstFormGroup">
+            <form [formGroup]="firstFormGroup">
+              <ng-template matStepLabel>Fill out your name</ng-template>
+              <mat-form-field>
+                <input matInput placeholder="Last name, First name" formControlName="firstCtrl" required>
+              </mat-form-field>
+              <div>
+                <button mat-button matStepperNext>Next</button>
+              </div>
+            </form>
+          </mat-step>
+          <mat-step [stepControl]="secondFormGroup">
+            <form [formGroup]="secondFormGroup">
+              <ng-template matStepLabel>Fill out your address</ng-template>
+              <mat-form-field>
+                <input matInput placeholder="Address" formControlName="secondCtrl" required>
+              </mat-form-field>
+              <div>
+                <button mat-button matStepperPrevious>Back</button>
+                <button mat-button matStepperNext>Next</button>
+              </div>
+            </form>
+          </mat-step>
+          <mat-step>
+            <ng-template matStepLabel>Done</ng-template>
+            Loan application waiting approval.
+            <div>
+              <button mat-button matStepperPrevious>Back</button>
+              <button mat-button (click)="stepper.reset()">New Loan</button>
+            </div>
+          </mat-step>
+        </mat-horizontal-stepper>
+      </div>
+    </mat-drawer-container>
+  </div>
+</div>

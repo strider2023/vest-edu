@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { BorrowerRoutingModule } from './borrower-routing.module';
 import { BorrowerDashboardComponent } from './borrower-dashboard/borrower-dashboard.component';
@@ -18,6 +19,8 @@ import { MaterialModule } from '../material.module';
 import { FlexLayoutModule } from '@angular/flex-layout';
 
 import { LoansService } from './loans/services/loans.service';
+import { WithdrawlComponent } from './transactions/withdrawl/withdrawl.component';
+import { DepositsComponent } from './transactions/deposits/deposits.component';
 
 @NgModule({
   imports: [
@@ -25,7 +28,9 @@ import { LoansService } from './loans/services/loans.service';
     BorrowerRoutingModule,
     MaterialModule,
     FlexLayoutModule,
-    CoreModule
+    CoreModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   declarations: [
     BorrowerDashboardComponent,
@@ -37,7 +42,9 @@ import { LoansService } from './loans/services/loans.service';
     ApplyLoanComponent,
     ProfilePersonalComponent,
     ProfileProfessionalComponent,
-    ProfileEducationComponent],
+    ProfileEducationComponent,
+    WithdrawlComponent,
+    DepositsComponent],
   providers: [LoansService]
 })
 export class BorrowerModule { }

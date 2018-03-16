@@ -1,3 +1,54 @@
-<p>
-  users works!
-</p>
+<div class="w100 h100" fxFlex="column">
+  <div class="w100">
+    <mat-toolbar color="primary">
+      <mat-toolbar-row>
+        <button (click)="drawer.toggle()" mat-icon-button>
+          <mat-icon class="material-icons">menu</mat-icon>
+        </button>
+        <span>My Users</span>
+        <span class="example-spacer"></span>
+      </mat-toolbar-row>
+    </mat-toolbar>
+  </div>
+  <div class="w100 dashboard" fxLayout="row">
+    <mat-drawer-container class="example-container w100" autosize>
+      <mat-drawer #drawer class="vasedu-sidenav" mode="side">
+        <mat-card-header>
+          <div mat-card-avatar class="example-header-image"></div>
+          <mat-card-title>Arindam Nath</mat-card-title>
+          <mat-card-subtitle>Admin</mat-card-subtitle>
+        </mat-card-header>
+        <mat-list class="list-wrap">
+          <mat-list-item *ngFor="let category of categories" routerLink="{{category.route}}">
+            <button mat-icon-button>
+              <mat-icon class="material-icons">{{category.icon}}</mat-icon>
+            </button>
+            <p>{{category.name}}</p>
+          </mat-list-item>
+        </mat-list>
+      </mat-drawer>
+      <div class="content" fxLayout="row" fxLayoutAlign="center center">
+        <mat-tab-group class="w100">
+          <mat-tab label="Borrowers">
+            <mat-list>
+              <mat-list-item *ngFor="let folder of folders">
+                <mat-icon mat-list-icon>account_circle</mat-icon>
+                <h4 mat-line>{{folder.name}}</h4>
+                <p mat-line> Member Since : {{folder.updated | date}} </p>
+              </mat-list-item>
+            </mat-list>
+          </mat-tab>
+          <mat-tab label="Lenders">
+            <mat-list>
+              <mat-list-item *ngFor="let folder of folders">
+                <mat-icon mat-list-icon>account_circle</mat-icon>
+                <h4 mat-line>{{folder.name}}</h4>
+                <p mat-line> Member Since : {{folder.updated | date}} </p>
+              </mat-list-item>
+            </mat-list>
+          </mat-tab>
+        </mat-tab-group>
+      </div>
+    </mat-drawer-container>
+  </div>
+</div>
